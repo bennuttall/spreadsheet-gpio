@@ -2,8 +2,10 @@ import json
 import gspread
 from oauth2client.client import SignedJwtAssertionCredentials
 from time import sleep
+import os
 
-json_key = json.load(open('gdrive.json'))
+current_dir = os.path.dirname(os.path.realpath(__file__))
+json_key = json.load(open(current_dir+'/gdrive.json'))
 scope = ['https://spreadsheets.google.com/feeds']
 email = json_key['client_email']
 private_key = json_key['private_key'].encode()

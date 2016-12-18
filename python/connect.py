@@ -21,4 +21,3 @@ def read_cell(wks, r, c):
 def read_cell_continuous(wks, r, c):
     while True:
         yield read_cell(wks, r, c)
-        sleep(0.1)
